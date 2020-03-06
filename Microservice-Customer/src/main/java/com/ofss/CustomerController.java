@@ -20,15 +20,6 @@ public class CustomerController {
 	@Autowired
 	RemoteStockRepository remoteStockRepository;
 	
-//	Address a1=new Address(5,"Golden Globe Apt","Bangalore",560102L);
-//	int stocks1[]= {1,2};
-//	Customer c1=new Customer(1, "Guru", a1,stocks1);
-	
-
-	Address a2=new Address(23,"Vaswani Techno","Bangalore",560155L);
-	int stocks2[]= {1,2};
-	Customer c2=new Customer(2, "Peter", a2,stocks2);
-
 	Address a3=new Address(14,"SRH Building","Mumbai",234552L);
 	int stocks3[]= {3,4};
 	Customer c3=new Customer(3, "Mukul", a3,stocks3);
@@ -47,7 +38,8 @@ public class CustomerController {
 //	Customer c2=new Customer(2, "Peter", a2,stocks2);
 	int[] ints = {1,2,3};
 	List<Integer> list = Arrays.stream(ints).boxed().collect(Collectors.toList());
-	int stocks1[]= {1,2};
+	//int stocks1[]= {1,2};
+	int stocks2[]= {1,2};
 	@SuppressWarnings("unchecked")
 	ArrayList<Customer> allCustomers=new ArrayList<Customer>(Arrays.asList(Customer.builder()
 			.customerId(1)
@@ -58,7 +50,7 @@ public class CustomerController {
 					.city("Mumbai")
 					.pinCode(400500L)
 					.build())
-			.stockIds(stocks1)
+			.stockIds(new int[]{1,2})
 			.build(),
 			Customer.builder()
 			.customerId(2)
@@ -69,7 +61,7 @@ public class CustomerController {
 					.city("Bangalore")
 					.pinCode(400505L)
 					.build())
-			.stockIds(stocks2)
+			.stockIds(new int[]{1,2})
 			.build(),
 			Customer.builder()
 			.customerId(3)
@@ -80,7 +72,7 @@ public class CustomerController {
 					.city("Pune")
 					.pinCode(400505L)
 					.build())
-			.stockIds(stocks3)
+			.stockIds(new int[]{3,4})
 			.build()
 			));
 
